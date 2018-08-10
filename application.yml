@@ -4,7 +4,7 @@ services:
     port: 8082
   user-service:
     host: user-service
-    port: 8082
+    port: 8081
 
 zuul:
   sensitiveHeaders:
@@ -29,6 +29,11 @@ db:
 todo-service:
   ribbon:
     listOfServers: ${services.todo-service.host}:${services.todo-service.port}
+
+user-service:
+  ribbon:
+    listOfServers: ${services.user-service.host}:${services.user-service.port}
+
 
 spring:
   jpa:
