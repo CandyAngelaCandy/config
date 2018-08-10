@@ -2,6 +2,22 @@ services:
   todo-service:
     host: todo-service
     port: 8082
+  user-service:
+    host: user-service
+    port: 8082
+
+zuul:
+  sensitiveHeaders:
+  routes:
+    register-service:
+      path: /users
+      serviceId: user-service
+      strip-prefix: false
+    todo-service:
+      path: /todos
+      serviceId: todo-service
+      strip-prefix: false
+
 
 db:
   host: mysql
