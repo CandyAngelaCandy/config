@@ -57,9 +57,5 @@ logging:
       springframework:
         security: INFO
 
-
-
-
-
 server:
   port: ${services.${spring.application.name}.port}

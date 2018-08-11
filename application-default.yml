@@ -1,3 +1,5 @@
 services:
   todo-service:
     host: localhost
+  user-service:
+    host: localhost
