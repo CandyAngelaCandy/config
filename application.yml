@@ -5,6 +5,9 @@ services:
   user-service:
     host: user-service
     port: 8081
+  gateway:
+    host: gateway
+    port: 8080
 
 zuul:
   sensitiveHeaders:
