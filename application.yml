@@ -8,9 +8,9 @@ services:
   gateway:
     host: gateway
     port: 8080
-    context-path: /api
 
 zuul:
+  context-path: /api
   sensitiveHeaders:
   routes:
     register-service:
