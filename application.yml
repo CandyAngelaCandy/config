@@ -8,7 +8,6 @@ services:
   gateway:
     host: gateway
     port: 8080
-    context-path: /api
 
 zuul:
   sensitiveHeaders:
@@ -21,7 +20,7 @@ zuul:
       path: /todos
       serviceId: todo-service
       strip-prefix: false
-
+  prefix: /api
 
 db:
   host: mysql
